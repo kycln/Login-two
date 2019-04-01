@@ -1,10 +1,9 @@
-package com.bbu.daos;
+package com.bbu.servicef;
 
 import java.util.ArrayList;
-
 import com.bbu.model.User;
 
-public interface UserDao {
+public interface UserService {
 	//增加用户
 	public boolean addUser(User user);
 	//删除用户
@@ -17,10 +16,11 @@ public interface UserDao {
 	public User findUserByName(String name);
 	//返回全体用户
 	public ArrayList<User> getAllUsers();
-	//查询分页后的用户
-	public ArrayList<User> getAllUsersByPage(int currentPage , int pageSize);
+	//返回分页后用户
+	public ArrayList<User> getAllUsersByPage(int currentPage, int
+	pageSize);
 	//查询计算数据库总记录数
 	public Integer getUserCount();
 	//验证用户登录
 	public boolean checkUserLogin(User user);
-}
+	}
