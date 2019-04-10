@@ -30,7 +30,7 @@
 			</div>
 			<div class="col-md-2 col-md-offset-10">
 				<h4>
-					欢迎您,${modify.userName}&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.jsp">安全退出</a>
+					欢迎您,${modify.username}&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.jsp">安全退出</a>
 				</h4>
 			</div>
 		</div>
@@ -40,33 +40,32 @@
 				<h2 style="text-align: center">修改用户信息</h2>
 				<!-- </div> -->
 				<hr />
-				<%request.setCharacterEncoding("UTF-8"); %>
-				<form class="form-horizontal" action="UserServlet?type=modifyjsp&id=${user.id }"method="post">
+				<form class="form-horizontal" action="UserServlet?type=modifyjsp&id=${modify.id }"method="post">
 					<div class="form-group">
 						<label for="inputUserName" class="col-sm-2 control-label">姓名:</label>
 						<div class="col-sm-10">
-							<input type="text"  value=${user.username } class="form-control" name="username"
+							<input type="text"  value="${modify.username}" class="form-control" name="username"
 								id="inputUserName" placeholder=" 姓名 ">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword" class="col-sm-2 control-label">密码:</label>
 						<div class="col-sm-10">
-							<input type="password" value=${user.password }class="form-control" name="password"
+							<input type="password" value="${modify.password }" class="form-control" name="password"
 								id="inputPassword" placeholder=" 密码 ">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputGrade" class="col-sm-2 control-label">等级:</label>
 						<div class="col-sm-10">
-							<input type="text" value=${user.grade }class="form-control" name="grade"
+							<input type="text" value="${modify.grade }" class="form-control" name="grade"
 								id="inputGrade" placeholder=" 等级 ">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputEmail" class="col-sm-2 control-label">邮箱:</label>
 						<div class="col-sm-10">
-							<input type="email" value=${user.email } class="form-control" name="email"
+							<input type="email" value="${modify.email }" class="form-control" name="email"
 								id="inputEmail" placeholder=" 邮箱 ">
 						</div>
 					</div>

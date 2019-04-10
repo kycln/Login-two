@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public ArrayList<User> getAllUsersByPage(int currentPage, int pageSize) {
 		// TODO Auto-generated method stub
-		return null;
+		return new UserDaoImpl().getAllUsersByPage(currentPage, pageSize);
 	}
 
 	@Override

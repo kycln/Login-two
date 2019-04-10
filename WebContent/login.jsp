@@ -34,6 +34,10 @@
 					class="form-control" id="username" placeholder="用户名"> <label
 					for="exampleInputEmail1">密码</label> <input type="password"
 					class="form-control" id="password" placeholder="密码"><br />
+					<label for="exampleInputEmail1">验证码</label>
+                <input type="Captcha" class="Captcha" name="vcode" placeholder="请输入验证码！">
+                <img width="100px" height="50px" src="CheckNumber" onclick='src="CheckNumber?"+new Date()'>
+
 				<br />
 				<button type="submit" class="btn btn-success">登录</button>
 				<button type="button" class="btn btn-info">重置</button>

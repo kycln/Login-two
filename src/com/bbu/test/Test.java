@@ -35,4 +35,18 @@ public class Test {
 	public void getCount() {
 		System.out.println(new UserServiceImpl().getUserCount());
 	}
+	@org.junit.Test
+	public void checkingcount() {
+		UserDaoImpl dao = new UserDaoImpl();
+		com.bbu.model.User user = new com.bbu.model.User();
+		user.setUsername("admin");
+		user.setPassword("123456");
+		System.out.println(dao.checkUserLogin(user));
+	}
+	@org.junit.Test
+	public void MD5() {
+		com.bbu.util.MD5 md = new com.bbu.util.MD5();
+		String password = "123456";
+		System.out.println(md.makeMD5(password));
+	}
 }

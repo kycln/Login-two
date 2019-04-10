@@ -67,7 +67,6 @@ public class SQLHelper {
 		return pstate;
 	}
 	public static boolean executeUpdate(String sql , String[] parameters) {
-		boolean flag = false;
 		try {
 			conn = getConnection();
 			pstate = (PreparedStatement) conn.prepareStatement(sql);
@@ -75,7 +74,7 @@ public class SQLHelper {
 				for (int i = 0;i < parameters.length;i++) {
 					pstate.setString(i+1, parameters[i]);
 				}
-				flag = pstate.execute();
+					pstate.execute();
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -102,6 +101,24 @@ public class SQLHelper {
 		}
 		return rs;
 	}
+
+	public static ResultSet executeQuery1(String sql , Integer[] parameters) {
+		try {
+			conn = getConnection();
+			pstate = (PreparedStatement) conn.prepareStatement(sql);
+			if(null != parameters) {
+				for (int i = 0;i < parameters.length;i++) {
+					pstate.setInt(i+1, parameters[i]);
+				}
+				rs = pstate.executeQuery();	
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	
 	public static void close(ResultSet rs , PreparedStatement state , Connection conn) {
 		if(null != rs) {
 			try {

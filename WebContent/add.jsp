@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page language="java" import="com.bbu.model.*" %>
-<%request.setCharacterEncoding("utf-8"); response.setCharacterEncoding( "utf-8" ); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +29,7 @@
 			</div>
 			<div class="col-md-2 col-md-offset-10">
 				<h4>
-					欢迎您,${arraylist.user.userName}&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.jsp">安全退出</a>
+					欢迎您,${user.userName}&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.jsp">安全退出</a>
 				</h4>
 			</div>
 		</div>
